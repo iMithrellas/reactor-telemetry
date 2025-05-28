@@ -30,6 +30,9 @@ services:
       - "3000:3000"
     volumes:
       - grafana-data:/var/lib/grafana
+      - ./grafana/dashboards/reactor1.json:/var/lib/grafana/dashboards/reactor1.json
+      - ./grafana/dashboards/dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml
+      - ./grafana/datasources/influxdb.yaml:/etc/grafana/provisioning/datasources/influxdb.yaml
     depends_on:
       - influxdb
 

@@ -1,5 +1,6 @@
 local reactor = nil
 local reactorVersion = nil
+local serverIP = "localhost:" -- Change this to your server's IP address
 
 local function getPeripheral(typeName)
 	for _, side in ipairs(peripheral.getNames()) do
@@ -76,7 +77,7 @@ while true do
 	local stats = getStats()
 	local json = textutils.serializeJSON(stats)
 
-	local res = http.post("http://localhost:8080/reactor", json, {
+	local res = http.post("http://" .. serverIP .. "8080/reactor", json, {
 		["Content-Type"] = "application/json",
 	})
 
