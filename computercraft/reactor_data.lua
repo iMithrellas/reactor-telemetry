@@ -63,6 +63,7 @@ local function getStats()
 	stats.wasteAmount = reactor.getWasteAmount and reactor.getWasteAmount() or 0
 	stats.fuelConsumedLastTick = reactor.getFuelConsumedLastTick and reactor.getFuelConsumedLastTick() or 0
 	stats.fuelReactivity = reactor.getFuelReactivity and reactor.getFuelReactivity() or 0
+	stats.controlRodInsertion = reactor.getControlRodLevel and reactor.getControlRodLevel(0) or 0
 
 	-- Optional label and ID
 	stats.computerID = os.getComputerID()

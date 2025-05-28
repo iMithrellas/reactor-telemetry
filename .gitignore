@@ -1,0 +1,37 @@
+# Go build
+/go-server/server
+/go-server/coverage.*
+/go-server/*.test
+
+# Dependency caches
+/go-server/bin/
+/go-server/pkg/
+/go-server/vendor/
+
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+
+# Logs
+*.log
+
+# Env/config
+.env
+.env.*
+
+# Docker volumes and overrides
+docker-compose.override.yml
+
+# InfluxDB / Grafana persistent data (if accidentally mounted locally)
+influxdb-data/
+grafana-data/
+
+# Node modules (just in case)
+node_modules/
+
+# Compiled Lua bytecode
+*.luac
+
